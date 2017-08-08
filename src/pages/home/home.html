@@ -1,0 +1,21 @@
+<ion-header>
+  <ion-navbar color="primary">
+    <button ion-button menuToggle icon-only>
+      <ion-icon name="menu"></ion-icon>
+    </button>
+    <ion-title>
+      Home
+    </ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding>
+  <ion-row>
+    <ion-item>
+      <ion-label stacked color="primary">Image URL</ion-label>
+      <ion-input type="text" [(ngModel)]="imageUrl"></ion-input>
+    </ion-item>
+  </ion-row>
+
+  <button ion-button full large color="secondary" (tap)="goToPinchZoomPan()" [disabled]="!imageUrl">Let's do this!</button>
+</ion-content>
